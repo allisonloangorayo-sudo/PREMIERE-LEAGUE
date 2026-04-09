@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar Proyecto - Premier Predictor</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="model-page">
+    <header class="main-header" style="background: rgba(0,0,0,0.9); height: 80px;">
+        <nav class="nav-left">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-arrow-left"></i> VOLVER AL INICIO</a>
+        </nav>
+        <div class="logo-container">
+            <h1 class="logo-text">PREMIER<br><span class="accent">PREDICTOR</span></h1>
+        </div>
+        <div class="nav-right">
+             <span class="category">INVESTIGACIÓN COMPLETA</span>
+        </div>
+    </header>
+
+    <main class="content-detail">
+        <section class="detail-hero" style="background: linear-gradient(135deg, #000 0%, #1a1a2e 100%); padding: 120px 20px; text-align: center; border-bottom: 1px solid #333;">
+            <div class="container">
+                <span class="badge" style="background: #38bdf8; color: #000; padding: 5px 15px; border-radius: 20px; font-weight: 700; margin-bottom: 20px; display: inline-block;">PANORAMA GENERAL</span>
+                <h1 style="font-size: 3.5rem; margin-bottom: 20px;">INVESTIGACIÓN TÉCNICA</h1>
+                <p class="subtitle" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #ccc;">Desde el Análisis Exploratorio de Datos (EDA) hasta la implementación de modelos de aprendizaje profundo.</p>
+            </div>
+        </section>
+
+        <section class="research-sections" style="background: #0a0a0a; padding: 80px 0;">
+            <div class="container" style="max-width: 1100px; margin: 0 auto;">
+                
+                <div class="info-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 60px;">
+                    <div class="card" style="background: #161616; padding: 40px; border-radius: 20px; border: 1px solid #333;">
+                        <h2 style="color: #38bdf8; margin-bottom: 20px;"><i class="fa-solid fa-bullseye"></i> 1. Objetivo del Proyecto</h2>
+                        <p style="color: #ccc; line-height: 1.6;">Desarrollar un sistema de predicción de resultados para la Premier League que supere los modelos tradicionales del mercado. Buscamos encontrar patrones ocultos en el estilo de juego para predecir no solo quién gana, sino cómo y por qué ocurre el resultado.<br><br>Además, nos proponemos demostrar que la ciencia de datos puede democratizar el análisis táctico avanzado, reservado tradicionalmente para clubes de élite. Al integrar variables avanzadas como los Expected Goals (xG) y clasificadores de Machine Learning automatizados, este proyecto aspira a crear un ecosistema predictivo que no solo informe a los aficionados y analistas, sino que sirva como una rigurosa herramienta analítica y fundamental en la toma de decisiones basada en datos reales.</p>
+                    </div>
+                    <div class="card" style="background: #161616; padding: 40px; border-radius: 20px; border: 1px solid #333;">
+                        <h2 style="color: #38bdf8; margin-bottom: 20px;"><i class="fa-solid fa-lightbulb"></i> 2. Hipótesis de ML</h2>
+                        <p style="color: #ccc; line-height: 1.6;">Nuestra hipótesis central: *"Es posible superar a las casas de apuestas integrando el estilo de juego (Clustering) y la calidad individual (xG) en un modelo de Random Forest"*. Alcanzamos un **61.8% de Accuracy**, superando el **49.8% de Bet365**.</p>
+                    </div>
+                </div>
+
+                <div class="full-card" style="background: #161616; padding: 40px; border-radius: 20px; border: 1px solid #333; margin-bottom: 80px;">
+                    <h2 style="color: #38bdf8; margin-bottom: 30px;"><i class="fa-solid fa-flask"></i> 3. Metodología y EDA</h2>
+                    <p style="color: #ccc; margin-bottom: 30px;">Se realizó un análisis exhaustivo de miles de eventos de partidos, incluyendo:</p>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                        <div style="background: #000; padding: 25px; border-radius: 15px;">
+                            <h4 style="color: #fff; margin-bottom: 10px;">Análisis de Eventos</h4>
+                            <p style="color: #888; font-size: 0.9rem;">Tiros, pases progresivos y recuperaciones filtrados para evitar sesgos.</p>
+                        </div>
+                        <div style="background: #000; padding: 25px; border-radius: 15px;">
+                            <h4 style="color: #fff; margin-bottom: 10px;">Enriquecimiento</h4>
+                            <p style="color: #888; font-size: 0.9rem;">Creación de métricas como 'Diferencial Táctico' y 'Eficiencia de Cluster'.</p>
+                        </div>
+                        <div style="background: #000; padding: 25px; border-radius: 15px;">
+                            <h4 style="color: #fff; margin-bottom: 10px;">Calidad de Datos</h4>
+                            <p style="color: #888; font-size: 0.9rem;">Limpieza de outliers (0,0 coordenados) y normalización de cuotas Bet365.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="model-selection-grid">
+                    <h2 style="text-align: center; margin-bottom: 60px; color: #fff;">Inmersión en los Modelos</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
+                        <a href="index.html#section-xg" class="explore-link" style="background: #161616; padding: 50px 30px; border-radius: 20px; text-decoration: none; border: 1px solid #333; text-align: center; transition: all 0.3s ease;">
+                            <i class="fa-solid fa-bullseye" style="font-size: 50px; margin-bottom: 25px; color: #38bdf8;"></i>
+                            <h3 style="color: #fff; margin-bottom: 15px;">Modelo xG</h3>
+                            <p style="color: #888; font-size: 0.95rem; margin-bottom: 25px;">Probabilidades de tiro y efectividad frente al arco.</p>
+                            <span style="background: #38bdf8; color: #000; padding: 8px 25px; border-radius: 5px; font-weight: 700; font-size: 0.8rem;">DETALLES TÉCNICOS</span>
+                        </a>
+                        <a href="index.html#section-match" class="explore-link" style="background: #161616; padding: 50px 30px; border-radius: 20px; text-decoration: none; border: 1px solid #f43f5e; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                             <div style="background: #f43f5e; color: #fff; position: absolute; top: 20px; right: -30px; transform: rotate(45deg); padding: 5px 40px; font-size: 0.7rem; font-weight: 700;">WINNER</div>
+                            <i class="fa-solid fa-trophy" style="font-size: 50px; margin-bottom: 25px; color: #f43f5e;"></i>
+                            <h3 style="color: #fff; margin-bottom: 15px;">Match Predictor</h3>
+                            <p style="color: #888; font-size: 0.95rem; margin-bottom: 25px;">Nuestro modelo ganador (61.8% Accuracy).</p>
+                            <span style="background: #f43f5e; color: #fff; padding: 8px 25px; border-radius: 5px; font-weight: 700; font-size: 0.8rem;">DETALLES TÉCNICOS</span>
+                        </a>
+                        <a href="index.html#section-clustering" class="explore-link" style="background: #161616; padding: 50px 30px; border-radius: 20px; text-decoration: none; border: 1px solid #333; text-align: center; transition: all 0.3s ease;">
+                            <i class="fa-solid fa-layer-group" style="font-size: 50px; margin-bottom: 25px; color: #22c55e;"></i>
+                            <h3 style="color: #fff; margin-bottom: 15px;">Clustering</h3>
+                            <p style="color: #888; font-size: 0.95rem; margin-bottom: 25px;">Análisis de estilos de juego y ADN táctico.</p>
+                            <span style="background: #22c55e; color: #fff; padding: 8px 25px; border-radius: 5px; font-weight: 700; font-size: 0.8rem;">DETALLES TÉCNICOS</span>
+                        </a>
+                        <a href="index.html#section-rf" class="explore-link" style="background: #161616; padding: 50px 30px; border-radius: 20px; text-decoration: none; border: 1px solid #333; text-align: center; transition: all 0.3s ease;">
+                            <i class="fa-solid fa-tree" style="font-size: 50px; margin-bottom: 25px; color: #a855f7;"></i>
+                            <h3 style="color: #fff; margin-bottom: 15px;">Random Forest</h3>
+                            <p style="color: #888; font-size: 0.95rem; margin-bottom: 25px;">El bosque de decisiones y variables de importancia.</p>
+                            <span style="background: #a855f7; color: #fff; padding: 8px 25px; border-radius: 5px; font-weight: 700; font-size: 0.8rem;">DETALLES TÉCNICOS</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" style="padding: 60px 20px; text-align: center; background: #000; border-top: 1px solid #333;">
+        <p style="color: #666;">&copy; 2026 Premier Predictor - Taller de Machine Learning - Allison & Danna</p>
+    </footer>
+
+    <style>
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .model-page { background: #000; color: #fff; font-family: 'Outfit', sans-serif; }
+        header { border-bottom: 1px solid #333; z-index: 100; }
+        .logo-text { font-size: 1.5rem; line-height: 1; text-transform: uppercase; }
+        .accent { color: #38bdf8; font-weight: 700; }
+        .nav-link { color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .nav-link:hover { color: #38bdf8; }
+        .badge { font-size: 0.8rem; letter-spacing: 1px; }
+        .explore-link:hover {
+            transform: translateY(-10px);
+            background: #222 !important;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{
+    "ranking": [
+        {
+            "pos": 1,
+            "name": "Arsenal",
+            "short": "ars",
+            "coef": 87.1,
+            "label": "The Elites (Title Contenders)"
+        },
+        {
+            "pos": 2,
+            "name": "Man City",
+            "short": "man",
+            "coef": 84.0,
+            "label": "The Elites (Title Contenders)"
+        },
+        {
+            "pos": 3,
+            "name": "Liverpool",
+            "short": "liv",
+            "coef": 68.0,
+            "label": "The Elites (Title Contenders)"
+        },
+        {
+            "pos": 4,
+            "name": "Chelsea",
+            "short": "che",
+            "coef": 67.4,
+            "label": "The Elites (Title Contenders)"
+        },
+        {
+            "pos": 5,
+            "name": "Man United",
+            "short": "man",
+            "coef": 62.8,
+            "label": "The Elites (Title Contenders)"
+        }
+    ],
+    "mvps": [
+        {
+            "name": "Erling Haaland",
+            "club": "Man City",
+            "xg_90": 0.79,
+            "price": 14.6,
+            "influence": 977.0
+        },
+        {
+            "name": "Cole Palmer",
+            "club": "Chelsea",
+            "xg_90": 0.58,
+            "price": 10.6,
+            "influence": 450.0
+        },
+        {
+            "name": "Igor Thiago Nascimento Rodrigues",
+            "club": "Brentford",
+            "xg_90": 0.57,
+            "price": 7.2,
+            "influence": 788.2
+        }
+    ],
+    "matches": [
+        {
+            "home": "Arsenal",
+            "away": "Man City",
+            "prob_h": 45,
+            "prob_a": 35
+        },
+        {
+            "home": "Liverpool",
+            "away": "Chelsea",
+            "prob_h": 60,
+            "prob_a": 20
+        },
+        {
+            "home": "Man United",
+            "away": "Burnley",
+            "prob_h": 75,
+            "prob_a": 10
+        }
+    ]
+}

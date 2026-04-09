@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANKING COMPLETO DE PODER | ML Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/index.css">
+</head>
+<body>
+    <header class="main-header" style="background: rgba(2,6,23,0.9); height: 80px;">
+        <div class="header-container" style="position: relative; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h1 class="logo" style="margin: 30px 0;">PREMIER PREDICTOR <span class="badge">ML</span></h1>
+            <a href="index.html" class="section-close-btn"><i class="fa-solid fa-xmark"></i> CERRAR</a>
+        </div>
+    </header>
+    <main style="padding-top: 100px; min-height: 100vh; background: #020617; position: relative;">
+        <!-- Background Blur -->
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(circle at 10% 20%, rgba(0, 68, 204, 0.4) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.3) 0%, transparent 40%); z-index: 0;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="section-title" style="margin-bottom: 2rem;">RANKING COMPLETO DE PODER</h2>
+            
+<div class="glass-panel" style="width: 100%; padding: 30px;">
+    <!-- Leyenda de Clusters -->
+    <style>
+    .cluster-cards-container { display: flex; flex-wrap: wrap; gap: 35px; margin-bottom: 45px; justify-content: center; }
+    .flip-circle { width: 160px; height: 160px; perspective: 1000px; cursor: pointer; }
+    .flip-circle-inner { width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; position: relative; }
+    .flip-circle:hover .flip-circle-inner { transform: rotateY(180deg); }
+    .flip-circle-front, .flip-circle-back { width: 100%; height: 100%; border-radius: 50%; position: absolute; backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 18px; box-sizing: border-box; }
+    .flip-circle-front i { font-size: 2.5rem; margin-bottom: 12px; }
+    .flip-circle-front span { font-weight: 800; font-size: 0.95rem; text-transform: uppercase; }
+    .flip-circle-back { transform: rotateY(180deg); font-size: 0.85rem; font-weight: 600; line-height: 1.4; display: flex; align-items: center; justify-content: center; }
+    
+    .card-elite .flip-circle-front { background: rgba(255, 215, 0, 0.1); border: 2px solid #ffd700; color: #ffd700; box-shadow: 0 0 15px rgba(255,215,0,0.3); }
+    .card-elite .flip-circle-back { background: #ffd700; color: #000; border: 2px solid #ffd700; box-shadow: 0 0 25px rgba(255,215,0,0.6); }
+    
+    .card-eu .flip-circle-front { background: rgba(0, 180, 216, 0.1); border: 2px solid #00b4d8; color: #00b4d8; box-shadow: 0 0 15px rgba(0,180,216,0.3); }
+    .card-eu .flip-circle-back { background: #00b4d8; color: #fff; border: 2px solid #00b4d8; box-shadow: 0 0 25px rgba(0,180,216,0.6); }
+    
+    .card-mid .flip-circle-front { background: rgba(45, 212, 191, 0.1); border: 2px solid #2dd4bf; color: #2dd4bf; box-shadow: 0 0 15px rgba(45,212,191,0.3); }
+    .card-mid .flip-circle-back { background: #2dd4bf; color: #000; border: 2px solid #2dd4bf; box-shadow: 0 0 25px rgba(45,212,191,0.6); }
+    
+    .card-risk .flip-circle-front { background: rgba(227, 6, 19, 0.1); border: 2px solid #e30613; color: #e30613; box-shadow: 0 0 15px rgba(227,6,19,0.3); }
+    .card-risk .flip-circle-back { background: #e30613; color: #fff; border: 2px solid #e30613; box-shadow: 0 0 25px rgba(227,6,19,0.6); }
+    </style>
+    
+    <div style="text-align:center; margin-bottom: 30px;">
+        <h4 style="margin-top: 0; margin-bottom: 5px; font-size: 1.2rem; color: #fff; text-transform: uppercase; letter-spacing: 2px;">Perfiles de Algoritmo (Clustering)</h4>
+        <p style="color: #a1a1aa; font-size: 0.95rem; margin-top: 0;">Pasa el cursor sobre los círculos para revelar el poder matemático de tu modelo.</p>
+    </div>
+    
+    <div class="cluster-cards-container">
+        <!-- Elite -->
+        <div class="flip-circle card-elite">
+            <div class="flip-circle-inner">
+                <div class="flip-circle-front">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>The Elites</span>
+                </div>
+                <div class="flip-circle-back">
+                    Equipos dominantes con seria aspiración al título global. Estadísticas arrolladoras.
+                </div>
+            </div>
+        </div>
+        <!-- Solid -->
+        <div class="flip-circle card-eu">
+            <div class="flip-circle-inner">
+                <div class="flip-circle-front">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Solid Race</span>
+                </div>
+                <div class="flip-circle-back">
+                    Perfiles estables. Fuertes contendientes a clasificar a competiciones Europeas.
+                </div>
+            </div>
+        </div>
+        <!-- Mid-Table -->
+        <div class="flip-circle card-mid">
+            <div class="flip-circle-inner">
+                <div class="flip-circle-front">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span>Mid-Table</span>
+                </div>
+                <div class="flip-circle-back">
+                    Equipos seguros. Poco riesgo a descender y lejanos de la copa. Altamente equilibrados.
+                </div>
+            </div>
+        </div>
+        <!-- High Risk -->
+        <div class="flip-circle card-risk">
+            <div class="flip-circle-inner">
+                <div class="flip-circle-front">
+                    <i class="fa-solid fa-fire"></i>
+                    <span>High Risk</span>
+                </div>
+                <div class="flip-circle-back">
+                    Problemas en cancha. Vulnerables con muy alto riesgo matemático de descender.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <table class="uefa-table" style="width: 100%;">
+        <thead>
+            <tr><th>Posición</th><th>Club</th><th>Prob. Victoria (ML)</th><th>Coeficiente Poder</th><th>Clúster/Perfil</th><th>Tendencia</th></tr>
+        </thead>
+        <tbody>
+    <tr>
+        <td>1</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/359.png" alt="Arsenal" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Arsenal</td>
+        <td>66.2%</td>
+        <td><strong>87.1</strong></td>
+        <td>The Elites (Title Contenders)</td>
+        <td class="trend up"><i class="fa-solid fa-caret-up"></i></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/382.png" alt="Man City" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Man City</td>
+        <td>63.1%</td>
+        <td><strong>84.0</strong></td>
+        <td>The Elites (Title Contenders)</td>
+        <td class="trend up"><i class="fa-solid fa-caret-up"></i></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/364.png" alt="Liverpool" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Liverpool</td>
+        <td>58.0%</td>
+        <td><strong>68.0</strong></td>
+        <td>The Elites (Title Contenders)</td>
+        <td class="trend up"><i class="fa-solid fa-caret-up"></i></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/363.png" alt="Chelsea" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Chelsea</td>
+        <td>52.9%</td>
+        <td><strong>67.4</strong></td>
+        <td>The Elites (Title Contenders)</td>
+        <td class="trend up"><i class="fa-solid fa-caret-up"></i></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/360.png" alt="Man United" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Man United</td>
+        <td>48.8%</td>
+        <td><strong>62.8</strong></td>
+        <td>The Elites (Title Contenders)</td>
+        <td class="trend equal"><i class="fa-solid fa-equal"></i></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/361.png" alt="Newcastle" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Newcastle</td>
+        <td>47.6%</td>
+        <td><strong>54.8</strong></td>
+        <td>The Elites (Title Contenders)</td>
+        <td class="trend equal"><i class="fa-solid fa-equal"></i></td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/362.png" alt="Aston Villa" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Aston Villa</td>
+        <td>41.7%</td>
+        <td><strong>51.1</strong></td>
+        <td>Solid Competitors (European Race)</td>
+        <td class="trend equal"><i class="fa-solid fa-equal"></i></td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/331.png" alt="Brighton" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Brighton</td>
+        <td>39.9%</td>
+        <td><strong>48.1</strong></td>
+        <td>Solid Competitors (European Race)</td>
+        <td class="trend equal"><i class="fa-solid fa-equal"></i></td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/337.png" alt="Brentford" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Brentford</td>
+        <td>36.4%</td>
+        <td><strong>46.2</strong></td>
+        <td>Solid Competitors (European Race)</td>
+        <td class="trend equal"><i class="fa-solid fa-equal"></i></td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/349.png" alt="Bournemouth" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Bournemouth</td>
+        <td>37.7%</td>
+        <td><strong>44.8</strong></td>
+        <td>Chaos/High Risk (Relegation Risk)</td>
+        <td class="trend equal"><i class="fa-solid fa-equal"></i></td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/384.png" alt="Crystal Palace" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Crystal Palace</td>
+        <td>38.3%</td>
+        <td><strong>43.4</strong></td>
+        <td>Stable Mid-Table</td>
+        <td class="trend equal"><i class="fa-solid fa-equal"></i></td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/368.png" alt="Everton" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Everton</td>
+        <td>34.7%</td>
+        <td><strong>40.7</strong></td>
+        <td>Solid Competitors (European Race)</td>
+        <td class="trend equal"><i class="fa-solid fa-equal"></i></td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/370.png" alt="Fulham" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Fulham</td>
+        <td>34.5%</td>
+        <td><strong>40.2</strong></td>
+        <td>Chaos/High Risk (Relegation Risk)</td>
+        <td class="trend equal"><i class="fa-solid fa-equal"></i></td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/367.png" alt="Tottenham" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Tottenham</td>
+        <td>37.3%</td>
+        <td><strong>39.3</strong></td>
+        <td>Chaos/High Risk (Relegation Risk)</td>
+        <td class="trend equal"><i class="fa-solid fa-equal"></i></td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/357.png" alt="Leeds" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Leeds</td>
+        <td>31.0%</td>
+        <td><strong>34.9</strong></td>
+        <td>Chaos/High Risk (Relegation Risk)</td>
+        <td class="trend down"><i class="fa-solid fa-caret-down"></i></td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/393.png" alt="Nott'm Forest" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Nott'm Forest</td>
+        <td>33.5%</td>
+        <td><strong>31.6</strong></td>
+        <td>Chaos/High Risk (Relegation Risk)</td>
+        <td class="trend down"><i class="fa-solid fa-caret-down"></i></td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/366.png" alt="Sunderland" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Sunderland</td>
+        <td>25.8%</td>
+        <td><strong>29.3</strong></td>
+        <td>Stable Mid-Table</td>
+        <td class="trend down"><i class="fa-solid fa-caret-down"></i></td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/371.png" alt="West Ham" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> West Ham</td>
+        <td>27.0%</td>
+        <td><strong>28.9</strong></td>
+        <td>Chaos/High Risk (Relegation Risk)</td>
+        <td class="trend down"><i class="fa-solid fa-caret-down"></i></td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/380.png" alt="Wolves" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Wolves</td>
+        <td>22.4%</td>
+        <td><strong>17.1</strong></td>
+        <td>Chaos/High Risk (Relegation Risk)</td>
+        <td class="trend down"><i class="fa-solid fa-caret-down"></i></td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td class="club-cell" style="display:flex; align-items:center; gap:10px;"><img src="https://a.espncdn.com/i/teamlogos/soccer/500/379.png" alt="Burnley" style="width:25px; height:25px; object-fit:contain; vertical-align:middle; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));"> Burnley</td>
+        <td>18.7%</td>
+        <td><strong>15.0</strong></td>
+        <td>Chaos/High Risk (Relegation Risk)</td>
+        <td class="trend down"><i class="fa-solid fa-caret-down"></i></td>
+    </tr></tbody>
+    </table>
+</div>
+
+        </div>
+    </main>
+    
+</body>
+</html>

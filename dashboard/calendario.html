@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALENDARIO DE JUEGOS Y PRONÓSTICOS | ML Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/index.css">
+</head>
+<body>
+    <header class="main-header" style="background: rgba(2,6,23,0.9); height: 80px;">
+        <div class="header-container">
+            <h1 class="logo">PREMIER PREDICTOR <span class="badge">ML</span></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="section-close-btn"><i class="fa-solid fa-xmark"></i> CERRAR</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main style="padding-top: 100px; min-height: 100vh; background: #020617; position: relative;">
+        <!-- Background Blur -->
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(circle at 10% 20%, rgba(0, 68, 204, 0.4) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.3) 0%, transparent 40%); z-index: 0;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="section-title" style="margin-bottom: 2rem;">CALENDARIO DE JUEGOS Y PRONÓSTICOS</h2>
+            <div class="glass-panel" style="width: 100%; padding: 30px;"><div class="week-selector" style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:30px;"><button class="week-tab active" onclick="showWeek('Semana32')" style="padding: 10px 20px; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; background: #0044CC; opacity: 1; transition: 0.3s;">Semana 32</button><button class="week-tab " onclick="showWeek('Semana33')" style="padding: 10px 20px; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; background: rgba(255,255,255,0.1); opacity: 0.7; transition: 0.3s;">Semana 33</button><button class="week-tab " onclick="showWeek('Semana34')" style="padding: 10px 20px; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; background: rgba(255,255,255,0.1); opacity: 0.7; transition: 0.3s;">Semana 34</button><button class="week-tab " onclick="showWeek('Semana35')" style="padding: 10px 20px; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; background: rgba(255,255,255,0.1); opacity: 0.7; transition: 0.3s;">Semana 35</button><button class="week-tab " onclick="showWeek('Semana36')" style="padding: 10px 20px; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; background: rgba(255,255,255,0.1); opacity: 0.7; transition: 0.3s;">Semana 36</button><button class="week-tab " onclick="showWeek('Semana37')" style="padding: 10px 20px; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; background: rgba(255,255,255,0.1); opacity: 0.7; transition: 0.3s;">Semana 37</button><button class="week-tab " onclick="showWeek('Semana38')" style="padding: 10px 20px; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; background: rgba(255,255,255,0.1); opacity: 0.7; transition: 0.3s;">Semana 38</button></div><div id='Semana32' class='week-content' style='display: block;'><div class='match-grid'>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">vie., 10 de abr. • 14:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/371.png" alt="West Ham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">West Ham</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/380.png" alt="Wolves" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Wolves</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria West Ham (55%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 11 de abr. • 6:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/359.png" alt="Arsenal" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Arsenal</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/349.png" alt="Bournemouth" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Bournemouth</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Arsenal (64%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 11 de abr. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/337.png" alt="Brentford" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brentford</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/368.png" alt="Everton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Everton</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Brentford (51%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 11 de abr. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/379.png" alt="Burnley" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Burnley</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/331.png" alt="Brighton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brighton</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Brighton (68%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 11 de abr. • 11:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/364.png" alt="Liverpool" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Liverpool</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/370.png" alt="Fulham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Fulham</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Liverpool (63%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 12 de abr. • 8:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/384.png" alt="Crystal Palace" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Crystal Palace</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/361.png" alt="Newcastle" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Newcastle</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Newcastle (55%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 12 de abr. • 8:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/366.png" alt="Sunderland" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Sunderland</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/367.png" alt="Tottenham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Tottenham</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Tottenham (59%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 12 de abr. • 8:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/393.png" alt="Nott'm Forest" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Nott'm Forest</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/362.png" alt="Aston Villa" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Aston Villa</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Aston Villa (55%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 12 de abr. • 10:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/363.png" alt="Chelsea" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Chelsea</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/382.png" alt="Man City" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man City</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Man City (54%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">lun., 13 de abr. • 14:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/360.png" alt="Man United" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man United</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/357.png" alt="Leeds" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Leeds</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Man United (61%)</span>
+            </div>
+        </div></div></div><div id='Semana33' class='week-content' style='display: none;'><div class='match-grid'>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 18 de abr. • 6:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/337.png" alt="Brentford" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brentford</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/370.png" alt="Fulham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Fulham</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Brentford (51%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 18 de abr. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/361.png" alt="Newcastle" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Newcastle</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/349.png" alt="Bournemouth" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Bournemouth</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Newcastle (56%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 18 de abr. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/357.png" alt="Leeds" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Leeds</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/380.png" alt="Wolves" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Wolves</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Leeds (58%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 18 de abr. • 11:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/367.png" alt="Tottenham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Tottenham</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/331.png" alt="Brighton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brighton</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Brighton (52%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 18 de abr. • 14:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/363.png" alt="Chelsea" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Chelsea</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/360.png" alt="Man United" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man United</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Chelsea (52%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 19 de abr. • 8:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/368.png" alt="Everton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Everton</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/364.png" alt="Liverpool" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Liverpool</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Liverpool (63%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 19 de abr. • 8:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/362.png" alt="Aston Villa" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Aston Villa</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/366.png" alt="Sunderland" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Sunderland</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Aston Villa (62%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 19 de abr. • 8:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/393.png" alt="Nott'm Forest" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Nott'm Forest</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/379.png" alt="Burnley" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Burnley</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Nott'm Forest (64%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 19 de abr. • 10:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/382.png" alt="Man City" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man City</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/359.png" alt="Arsenal" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Arsenal</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Arsenal (51%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">lun., 20 de abr. • 14:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/384.png" alt="Crystal Palace" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Crystal Palace</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/371.png" alt="West Ham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">West Ham</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Crystal Palace (59%)</span>
+            </div>
+        </div></div></div><div id='Semana34' class='week-content' style='display: none;'><div class='match-grid'>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">vie., 24 de abr. • 14:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/366.png" alt="Sunderland" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Sunderland</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/393.png" alt="Nott'm Forest" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Nott'm Forest</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Nott'm Forest (56%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 25 de abr. • 6:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/370.png" alt="Fulham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Fulham</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/362.png" alt="Aston Villa" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Aston Villa</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Aston Villa (55%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 25 de abr. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/349.png" alt="Bournemouth" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Bournemouth</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/357.png" alt="Leeds" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Leeds</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Bournemouth (55%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 25 de abr. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/371.png" alt="West Ham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">West Ham</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/368.png" alt="Everton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Everton</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Everton (56%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 25 de abr. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/364.png" alt="Liverpool" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Liverpool</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/384.png" alt="Crystal Palace" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Crystal Palace</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Liverpool (60%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 25 de abr. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/380.png" alt="Wolves" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Wolves</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/367.png" alt="Tottenham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Tottenham</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Tottenham (62%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 25 de abr. • 11:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/359.png" alt="Arsenal" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Arsenal</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/361.png" alt="Newcastle" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Newcastle</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Arsenal (58%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 26 de abr. • 8:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/379.png" alt="Burnley" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Burnley</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/382.png" alt="Man City" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man City</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Man City (77%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 26 de abr. • 10:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/331.png" alt="Brighton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brighton</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/363.png" alt="Chelsea" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Chelsea</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Chelsea (57%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">lun., 27 de abr. • 14:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/360.png" alt="Man United" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man United</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/337.png" alt="Brentford" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brentford</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Man United (57%)</span>
+            </div>
+        </div></div></div><div id='Semana35' class='week-content' style='display: none;'><div class='match-grid'>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">vie., 1 de may. • 14:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/357.png" alt="Leeds" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Leeds</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/379.png" alt="Burnley" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Burnley</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Leeds (62%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 2 de may. • 6:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/362.png" alt="Aston Villa" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Aston Villa</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/367.png" alt="Tottenham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Tottenham</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Aston Villa (53%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 2 de may. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/361.png" alt="Newcastle" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Newcastle</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/331.png" alt="Brighton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brighton</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Newcastle (54%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 2 de may. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/349.png" alt="Bournemouth" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Bournemouth</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/384.png" alt="Crystal Palace" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Crystal Palace</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value draw">Victoria Crystal Palace (50%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 2 de may. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/380.png" alt="Wolves" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Wolves</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/366.png" alt="Sunderland" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Sunderland</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Sunderland (54%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 2 de may. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/337.png" alt="Brentford" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brentford</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/371.png" alt="West Ham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">West Ham</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Brentford (57%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 2 de may. • 11:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/359.png" alt="Arsenal" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Arsenal</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/370.png" alt="Fulham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Fulham</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Arsenal (66%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 3 de may. • 9:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/360.png" alt="Man United" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man United</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/364.png" alt="Liverpool" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Liverpool</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Liverpool (54%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">lun., 4 de may. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/363.png" alt="Chelsea" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Chelsea</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/393.png" alt="Nott'm Forest" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Nott'm Forest</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Chelsea (61%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">lun., 4 de may. • 14:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/368.png" alt="Everton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Everton</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/382.png" alt="Man City" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man City</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Man City (65%)</span>
+            </div>
+        </div></div></div><div id='Semana36' class='week-content' style='display: none;'><div class='match-grid'>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 9 de may. • 6:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/364.png" alt="Liverpool" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Liverpool</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/363.png" alt="Chelsea" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Chelsea</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Liverpool (52%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 9 de may. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/366.png" alt="Sunderland" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Sunderland</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/360.png" alt="Man United" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man United</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Man United (65%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 9 de may. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/370.png" alt="Fulham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Fulham</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/349.png" alt="Bournemouth" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Bournemouth</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Bournemouth (52%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 9 de may. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/331.png" alt="Brighton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brighton</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/380.png" alt="Wolves" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Wolves</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Brighton (64%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 9 de may. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/379.png" alt="Burnley" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Burnley</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/362.png" alt="Aston Villa" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Aston Villa</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Aston Villa (69%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 9 de may. • 9:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/384.png" alt="Crystal Palace" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Crystal Palace</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/368.png" alt="Everton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Everton</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Crystal Palace (52%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">sáb., 9 de may. • 11:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/382.png" alt="Man City" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man City</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/337.png" alt="Brentford" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brentford</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Man City (63%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 10 de may. • 8:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/393.png" alt="Nott'm Forest" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Nott'm Forest</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/361.png" alt="Newcastle" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Newcastle</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Newcastle (59%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 10 de may. • 10:30</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/371.png" alt="West Ham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">West Ham</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/359.png" alt="Arsenal" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Arsenal</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Arsenal (71%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">lun., 11 de may. • 14:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/367.png" alt="Tottenham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Tottenham</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/357.png" alt="Leeds" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Leeds</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Tottenham (55%)</span>
+            </div>
+        </div></div></div><div id='Semana37' class='week-content' style='display: none;'><div class='match-grid'>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 17 de may. • Pendiente de anuncio</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/361.png" alt="Newcastle" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Newcastle</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/371.png" alt="West Ham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">West Ham</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Newcastle (64%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 17 de may. • Pendiente de anuncio</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/337.png" alt="Brentford" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brentford</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/384.png" alt="Crystal Palace" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Crystal Palace</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Crystal Palace (51%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 17 de may. • Pendiente de anuncio</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/349.png" alt="Bournemouth" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Bournemouth</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/382.png" alt="Man City" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man City</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Man City (63%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 17 de may. • Pendiente de anuncio</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/363.png" alt="Chelsea" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Chelsea</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/367.png" alt="Tottenham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Tottenham</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Chelsea (59%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 17 de may. • Pendiente de anuncio</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/368.png" alt="Everton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Everton</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/366.png" alt="Sunderland" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Sunderland</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Everton (57%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 17 de may. • Pendiente de anuncio</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/359.png" alt="Arsenal" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Arsenal</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/379.png" alt="Burnley" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Burnley</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Arsenal (78%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 17 de may. • Pendiente de anuncio</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/380.png" alt="Wolves" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Wolves</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/370.png" alt="Fulham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Fulham</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Fulham (61%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 17 de may. • Pendiente de anuncio</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/360.png" alt="Man United" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man United</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/393.png" alt="Nott'm Forest" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Nott'm Forest</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Man United (59%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 17 de may. • Pendiente de anuncio</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/357.png" alt="Leeds" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Leeds</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/331.png" alt="Brighton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brighton</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Brighton (56%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 17 de may. • Pendiente de anuncio</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/362.png" alt="Aston Villa" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Aston Villa</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/364.png" alt="Liverpool" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Liverpool</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Liverpool (58%)</span>
+            </div>
+        </div></div></div><div id='Semana38' class='week-content' style='display: none;'><div class='match-grid'>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 24 de may. • 10:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/364.png" alt="Liverpool" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Liverpool</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/337.png" alt="Brentford" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brentford</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Liverpool (61%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 24 de may. • 10:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/379.png" alt="Burnley" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Burnley</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/380.png" alt="Wolves" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Wolves</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Wolves (54%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 24 de may. • 10:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/384.png" alt="Crystal Palace" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Crystal Palace</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/359.png" alt="Arsenal" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Arsenal</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Arsenal (63%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 24 de may. • 10:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/371.png" alt="West Ham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">West Ham</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/357.png" alt="Leeds" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Leeds</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Leeds (53%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 24 de may. • 10:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/331.png" alt="Brighton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Brighton</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/360.png" alt="Man United" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man United</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Man United (55%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 24 de may. • 10:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/393.png" alt="Nott'm Forest" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Nott'm Forest</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/349.png" alt="Bournemouth" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Bournemouth</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Bournemouth (53%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 24 de may. • 10:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/370.png" alt="Fulham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Fulham</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/361.png" alt="Newcastle" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Newcastle</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Newcastle (58%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 24 de may. • 10:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/367.png" alt="Tottenham" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Tottenham</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/368.png" alt="Everton" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Everton</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Tottenham (52%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 24 de may. • 10:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/366.png" alt="Sunderland" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Sunderland</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/363.png" alt="Chelsea" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Chelsea</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner">Victoria Chelsea (67%)</span>
+            </div>
+        </div>
+        <div class="match-card">
+            <div class="match-date" style="text-transform: capitalize;">dom., 24 de may. • 10:00</div>
+            <div class="match-teams">
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/382.png" alt="Man City" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Man City</span>
+                </div>
+                <div class="match-vs">vs</div>
+                <div class="team" style="display:flex; flex-direction:column; align-items:center;">
+                    <img src="https://a.espncdn.com/i/teamlogos/soccer/500/362.png" alt="Aston Villa" style="width:50px; height:50px; object-fit:contain; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
+                    <span class="team-name" style="margin-top:8px;">Aston Villa</span>
+                </div>
+            </div>
+            <div class="match-prediction">
+                <span class="pred-label">Pred. Modelo:</span>
+                <span class="pred-value winner-home">Victoria Man City (60%)</span>
+            </div>
+        </div></div></div></div>
+        </div>
+    </main>
+    
+<script>
+function showWeek(weekId) {
+    document.querySelectorAll('.week-content').forEach(el => el.style.display = 'none');
+    document.getElementById(weekId).style.display = 'block';
+    document.querySelectorAll('.week-tab').forEach(btn => {
+        btn.style.background = 'rgba(255,255,255,0.1)';
+        btn.style.opacity = '0.7';
+    });
+    event.currentTarget.style.background = '#0044CC';
+    event.currentTarget.style.opacity = '1';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación Clustering - Allison y Danna</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="model-page">
+    <header class="main-header" style="background: rgba(0,0,0,0.9); height: 80px;">
+        <nav class="nav-left">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-arrow-left"></i> VOLVER AL INICIO</a>
+        </nav>
+        <div class="logo-container">
+            <h1 class="logo-text">ADN<br><span class="accent">TÁCTICO</span></h1>
+        </div>
+        <div class="nav-right">
+             <span class="category">APRENDIZAJE NO SUPERVISADO</span>
+        </div>
+    </header>
+
+    <main class="content-detail">
+        <section class="detail-hero" style="background: linear-gradient(135deg, #000 0%, #1a2e1a 100%); padding: 120px 20px; text-align: center; border-bottom: 1px solid #333;">
+            <div class="container">
+                <span class="badge" style="background: #22c55e; color: #fff; padding: 5px 15px; border-radius: 20px; font-weight: 700; margin-bottom: 20px; display: inline-block;">IDENTIDAD TÁCTICA</span>
+                <h1 style="font-size: 3.5rem; margin-bottom: 20px;">SEGMENTACIÓN (CLUSTERING)</h1>
+                <p class="subtitle" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #ccc;">Agrupación inteligente de jugadores y equipos mediante K-Means y DBSCAN para detectar patrones de éxito invisibles.</p>
+            </div>
+        </section>
+
+        <section class="research-sections" style="background: #0a0a0a; padding: 80px 0;">
+            <div class="container" style="max-width: 1100px; margin: 0 auto;">
+                
+                <!-- 1. ¿Qué es? y 2. ¿Para qué sirve? -->
+                <div class="info-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 60px;">
+                    <div class="card" style="background: #161616; padding: 40px; border-radius: 20px; border: 1px solid #333;">
+                        <h2 style="color: #22c55e; margin-bottom: 20px;"><i class="fa-solid fa-circle-nodes"></i> ¿Qué es?</h2>
+                        <p style="color: #ccc; line-height: 1.6;">Es una técnica de **Aprendizaje No Supervisado**. El modelo no tiene etiquetas de "ganar" o "perder", sino que agrupa a los jugadores por sus acciones atómicas: pases, peligrosidad, costo y efectividad. Es la base de la identidad técnica del proyecto.</p>
+                    </div>
+                    <div class="card" style="background: #161616; padding: 40px; border-radius: 20px; border: 1px solid #333;">
+                        <h2 style="color: #22c55e; margin-bottom: 20px;"><i class="fa-solid fa-magnifying-glass-chart"></i> ¿Para qué sirve?</h2>
+                        <p style="color: #ccc; line-height: 1.6;">Sirve para entender el rol real de un jugador. En el fútbol actual, un lateral puede ser un orquestador o un recuperador. El clustering revela estos **perfiles ocultos**, permitiendo al modelo xG diferenciar entre un tiro de un defensa vs un delantero élite.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Cómo se implementó y 4. Qué se realizó -->
+                <div class="full-card" style="background: #161616; padding: 40px; border-radius: 20px; border: 1px solid #333; margin-bottom: 60px;">
+                    <h2 style="color: #22c55e; margin-bottom: 30px;"><i class="fa-solid fa-microchip"></i> Implementación y Realización Técnica</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                        <div>
+                            <h3 style="color: #fff; margin-bottom: 15px;">Modelos de Agrupamiento</h3>
+                            <p style="color: #ccc; margin-bottom: 20px;">Utilizamos una combinación estratificada de algoritmos:</p>
+                            <ul style="color: #ccc; padding-left: 20px;">
+                                <li style="margin-bottom: 10px;"><strong>K-Means:</strong> Para definir perfiles dominantes (Finishers, Orquestadores).</li>
+                                <li style="margin-bottom: 10px;"><strong>DBSCAN:</strong> Para detectar "Unicornios" o anomalías que rompen la estadística común.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="color: #fff; margin-bottom: 15px;">¿Qué se realizó específicamente?</h3>
+                            <p style="color: #ccc;"><strong>Detección de Talento Irrepetible:</strong> Salah, Haaland y Palmer fueron detectados como anomalías por su eficiencia extrema:</p>
+                            <ul style="color: #ccc; padding-left: 20px; margin-top: 10px;">
+                                <li style="margin-bottom: 10px;"><strong>ICT Index:</strong> Medimos Influencia, Creatividad y Amenaza.</li>
+                                <li style="margin-bottom: 10px;"><strong>League Meta:</strong> Comparamos el xG acumulado con los puntos reales.</li>
+                                <li style="margin-bottom: 10px;"><strong>Team DNA:</strong> Clasificamos a los clubes por su agresividad táctica.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Gráficas 3D -->
+                <div class="visuals-section" style="margin-bottom: 80px;">
+                    <h2 style="color: #22c55e; margin-bottom: 40px; text-align: center;"><i class="fa-solid fa-cube"></i> Espacio Vectorial de Jugadores 3D</h2>
+                    <div style="background: #161616; padding: 20px; border-radius: 20px; border: 1px solid #333; text-align: center;">
+                        <img src="assets/models/clustering_3d.png" alt="Scatter 3D Clustering" style="width: 100%; max-width: 900px; border-radius: 15px; box-shadow: 0 0 30px rgba(34, 197, 94, 0.2);">
+                        <p style="margin-top: 20px; font-style: italic; color: #888;">Gráfica 3D: Agrupación Multidimensional (ICT Index vs Costo vs Amenaza). Se visualiza cómo los mejores jugadores del mundo se separan del resto en una "Nube de Élite".</p>
+                    </div>
+                </div>
+
+                <!-- 5. Gráficas Totales y 6. Interpretación -->
+                <div class="visuals-section" style="margin-bottom: 80px;">
+                    <h2 style="color: #22c55e; margin-bottom: 40px; text-align: center;"><i class="fa-solid fa-diagram-project"></i> Resultados de Segmentación</h2>
+                    <div class="image-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px;">
+                        <div class="img-card" style="background: #161616; padding: 25px; border-radius: 15px; border: 1px solid #333;">
+                            <img src="assets/models/player_clusters.png" alt="Clusters Jugadores" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                            <h3 style="color: #fff; margin-bottom: 10px;">Mapa K-Means</h3>
+                            <p style="color: #ccc;">Interpretación: El clúster rojo representa a los **"Asesinos del Área"**. Al usarlos en el modelo xG, entendimos que sus goles no dependen de la distancia, sino de su ubicación oportunista.</p>
+                        </div>
+                        <div class="img-card" style="background: #161616; padding: 25px; border-radius: 15px; border: 1px solid #333;">
+                            <img src="assets/models/player_outliers_dbscan.png" alt="DBSCAN Outliers" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                            <h3 style="color: #fff; margin-bottom: 10px;">Detección de "Unicornios"</h3>
+                            <p style="color: #ccc;">Interpretación: Las estrellas rojas son jugadores que rompen la lógica del mercado. El modelo aprendió que cuando Salah tiene el balón, las reglas estadísticas tradicionales cambian (+15% éxito).</p>
+                        </div>
+                        <div class="img-card" style="background: #161616; padding: 25px; border-radius: 15px; border: 1px solid #333;">
+                            <img src="assets/models/team_tactical_clusters.png" alt="Clusters Equipos" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                            <h3 style="color: #fff; margin-bottom: 10px;">Dendrograma de Identidad</h3>
+                            <p style="color: #ccc;">Interpretación: Comparamos equipos dominadores (City, Arsenal) con equipos reactivos. Esto permite predecir el marcador exacto con mayor seguridad (MAE de 0.74).</p>
+                        </div>
+                        <div class="img-card" style="background: #161616; padding: 25px; border-radius: 15px; border: 1px solid #333;">
+                            <img src="assets/models/league_meta_map.png" alt="Meta Liga" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                            <h3 style="color: #fff; margin-bottom: 10px;">El Meta de la Liga</h3>
+                            <p style="color: #ccc;">Interpretación: Correlacionamos el xG acumulado con los puntos. Los equipos arriba a la derecha son Máquinas Ofensivas que el modelo siempre prioriza.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. ¿Por qué es bueno para el modelo de predicción? -->
+                <div class="conclusion-card" style="background: linear-gradient(135deg, #161616 0%, #000 100%); padding: 50px; border-radius: 20px; border: 1px solid #22c55e; text-align: center;">
+                    <h2 style="color: #22c55e; margin-bottom: 25px;"><i class="fa-solid fa-code-merge"></i> Impacto en el Predictor</h2>
+                    <p style="color: #fff; font-size: 1.3rem; line-height: 1.6; max-width: 900px; margin: 0 auto;">
+                        Sin la segmentación táctica, el accuracy del modelo xG apenas llegaba al 52%. 
+                        Al integrar la **Categoría del Jugador** (Cluster), subimos al <strong>61.8%</strong>, demostrando que 
+                        el fútbol es un deporte de sistemas y talento individual, no solo de promedios generales.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" style="padding: 60px 20px; text-align: center; background: #000; border-top: 1px solid #333;">
+        <p style="color: #666;">&copy; 2026 Premier Predictor - Taller de Machine Learning - Allison & Danna</p>
+    </footer>
+
+    <style>
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .model-page { background: #000; color: #fff; font-family: 'Outfit', sans-serif; }
+        header { border-bottom: 1px solid #333; z-index: 100; }
+        .logo-text { font-size: 1.5rem; line-height: 1; }
+        .accent { color: #22c55e; font-weight: 700; }
+        .nav-link { color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .nav-link:hover { color: #22c55e; }
+        .badge { font-size: 0.8rem; letter-spacing: 1px; }
+        p strong { color: #fff; }
+    </style>
+</body>
+</html>

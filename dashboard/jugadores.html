@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANÁLISIS TÉCNICO DE JUGADORES | ML Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/index.css">
+</head>
+<body>
+    <header class="main-header" style="background: rgba(2,6,23,0.9); height: 80px;">
+        <div class="header-container" style="position: relative; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h1 class="logo" style="margin: 30px 0;">PREMIER PREDICTOR <span class="badge">ML</span></h1>
+            <a href="index.html" class="section-close-btn"><i class="fa-solid fa-xmark"></i> CERRAR</a>
+        </div>
+    </header>
+    <main style="padding-top: 100px; min-height: 100vh; background: #020617; position: relative;">
+        <!-- Background Blur -->
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(circle at 10% 20%, rgba(0, 68, 204, 0.4) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.3) 0%, transparent 40%); z-index: 0;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="section-title" style="margin-bottom: 2rem;">ANÁLISIS TÉCNICO DE JUGADORES</h2>
+            
+            <!-- Logos de equipos -->
+            <div class="glass-panel" style="width: 100%; padding: 30px; margin-bottom: 30px; text-align: center;">
+                <h3 style="color: white; margin-bottom: 20px; font-size: 1.2rem; letter-spacing: 1px;"><i class="fa-solid fa-hand-pointer" style="color: #0044CC;"></i> SELECCIONA UN EQUIPO</h3>
+                <div id="team-shields-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <!-- Los escudos se generarán aquí -->
+                </div>
+            </div>
+
+            <!-- Contenedor del equipo seleccionado -->
+            <div id="all-players-container" style="width: 100%;">
+                <div style="text-align: center; color: rgba(255,255,255,0.5); padding: 50px;">
+                    <i class="fa-solid fa-users" style="font-size: 3rem; margin-bottom: 20px; opacity: 0.5;"></i>
+                    <p>Haz clic en un equipo para ver a sus jugadores.</p>
+                </div>
+            </div>
+
+            <script src="src/players_data.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const shieldsContainer = document.getElementById('team-shields-container');
+                    const playersContainer = document.getElementById('all-players-container');
+                    
+                    // Diccionario básico de IDs de ESPN para logos (ejemplos)
+                    const logoMap = {
+                        "Arsenal": "359",
+                        "Man City": "382",
+                        "Liverpool": "364",
+                        "Chelsea": "363",
+                        "Man Utd": "360",
+                        "Bournemouth": "349",
+                        "Spurs": "367",
+                        "Newcastle": "361",
+                        "Aston Villa": "362",
+                        "Brighton": "331",
+                        "Everton": "368",
+                        "Fulham": "370",
+                        "Crystal Palace": "384",
+                        "Brentford": "337",
+                        "Wolves": "383",
+                        "Leeds": "357"
+                    };
+
+                    if(shieldsContainer && typeof teamPlayersData !== 'undefined') {
+                        // 1. Renderizar escudos
+                        for(const team in teamPlayersData) {
+                            const btn = document.createElement('button');
+                            btn.className = 'glass-input';
+                            btn.style.cssText = 'padding: 10px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.4); cursor: pointer; transition: 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100px; height: 100px;';
+                            
+                            // Efecto hover simple
+                            btn.onmouseover = () => btn.style.background = 'rgba(0,68,204,0.4)';
+                            btn.onmouseout = () => btn.style.background = 'rgba(0,0,0,0.4)';
+
+                            let logoUrl = logoMap[team] ? `https://a.espncdn.com/i/teamlogos/soccer/500/${logoMap[team]}.png` : null;
+                            
+                            if (logoUrl) {
+                                btn.innerHTML = `<img src="${logoUrl}" alt="${team}" style="width: 50px; height: 50px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2)); margin-bottom: 5px;">
+                                                 <span style="color: white; font-size: 0.75rem; font-weight: 600; text-align: center;">${team}</span>`;
+                            } else {
+                                btn.innerHTML = `<i class="fa-solid fa-shield" style="font-size: 30px; color: #fff; opacity:0.8; margin-bottom: 10px;"></i>
+                                                 <span style="color: white; font-size: 0.75rem; font-weight: 600; text-align: center;">${team}</span>`;
+                            }
+
+                            // 2. Al hacer click, renderizar jugadores
+                            btn.addEventListener('click', () => {
+                                renderTeamPlayers(team);
+                            });
+
+                            shieldsContainer.appendChild(btn);
+                        }
+                    }
+
+                    function renderTeamPlayers(team) {
+                        const players = teamPlayersData[team] || [];
+                        let html = `
+                            <div class="glass-panel" style="width: 100%; padding: 30px; animation: fadeIn 0.4s ease-in-out;">
+                                <h3 style="color: white; margin-bottom: 20px; font-size: 1.8rem; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+                                    ${team} SQUAD
+                                </h3>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+                        `;
+
+                        // Ya vienen ordenados de Python por xG de mayor a menor.
+                        // Calculamos cuántos son mejores y peores
+                        const count = players.length;
+                        
+                        players.forEach((p, index) => {
+                            // Si está en el top 15% es "mejor", si está en el fondo 15% es "peor" (o top 3 / bottom 3 si hay suficientes)
+                            let borderStyle = "border: 1px solid rgba(255,255,255,0.05);"; // Default
+                            let statusBadge = "";
+
+                            if (index < 3 && count > 5) {
+                                // Mejores 3 (Verde)
+                                borderStyle = "border: 2px solid #22c55e; box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);";
+                                statusBadge = `<div style="position:absolute; top:-10px; right:-10px; background:#22c55e; color:black; font-size:0.7rem; font-weight:bold; padding:2px 8px; border-radius:10px;">TOP</div>`;
+                            } else if (index >= count - 3 && count > 5) {
+                                // Peores 3 (Rojo)
+                                borderStyle = "border: 2px solid #ef4444; box-shadow: 0 0 15px rgba(239, 68, 68, 0.2); opacity: 0.8;";
+                                statusBadge = `<div style="position:absolute; top:-10px; right:-10px; background:#ef4444; color:white; font-size:0.7rem; font-weight:bold; padding:2px 8px; border-radius:10px;">LOW xG</div>`;
+                            }
+
+                            html += `
+                                <div class="player-item" style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 12px; position:relative; ${borderStyle} transition: 0.3s; cursor: default;">
+                                    ${statusBadge}
+                                    <div class="player-avatar ${p.isSuper ? 'halaand' : ''}" style="width: 50px; height: 50px;">${p.init}</div>
+                                    <div class="player-info">
+                                        <span class="player-name">${p.name}</span>
+                                        <span class="player-club" style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">xG Expected: ${p.xg}</span>
+                                    </div>
+                                    <div class="player-stats">
+                                        <span class="stat-badge tg-regular" style="margin-bottom:5px;">xG ${p.xg}/90</span>
+                                        <span class="market-value">£${p.price}</span>
+                                    </div>
+                                </div>
+                            `;
+                        });
+
+                        html += `
+                                </div>
+                            </div>
+                        `;
+                        
+                        playersContainer.innerHTML = html;
+                        // Scroll suave al contenedor
+                        playersContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            </script>
+
+        </div>
+    </main>
+</body>
+</html>
